@@ -5,9 +5,7 @@ import time
 import os
 import sys
 import itertools
-
 from PIL import Image, ImageDraw, ImageOps, ImageFilter
-
 
 __author__ = "Raoul Endresl"
 __copyright__ = "Copyright 2017"
@@ -35,7 +33,6 @@ latLower = -46.0
 imageSizeFactor = 1000
 
 imageFileName = "flight_" + str(int(lonLower)) + "_" + str(int(lonUpper)) + "_" + str(int(latLower)) + "_" + str(int(latUpper)) + ".jpg"
-
 
 GlobalWaypoints = []
 
@@ -72,8 +69,7 @@ def LoadFile( flightDataFile ):
 
 	print " loaded " + str(aircraft) + " flights with " + str(waypointcount) + " waypoints - " + str(len(GlobalWaypoints)) + " total waypoints            \r",
 	
-	
-	
+		
 def LoadAllFiles():
 	for filename in os.listdir(DataDir):
 		if filename.endswith(".json"): 
@@ -82,7 +78,6 @@ def LoadAllFiles():
 			
 
 def Map():
-
 	if os.path.isfile( imageFileName ):
 		os.remove( imageFileName )
 		
